@@ -2,5 +2,9 @@
   "name": "client",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "chartjs": "^0.3.24",
+    "mqtt": "^5.7.0"
+  }
 }

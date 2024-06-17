@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "objective: subscribe on mqtt broker, and plot chart.",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "lerna run build --parallel",
     "start": "lerna run start --parallel"
@@ -13,9 +14,7 @@
   "keywords": [],
   "author": "Rafael Trindade",
   "license": "ISC",
-  "dependencies": {
-    "mqtt": "^5.7.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "lerna": "^6.0.1"
   }
