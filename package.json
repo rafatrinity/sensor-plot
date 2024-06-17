@@ -1,0 +1,22 @@
+{
+  "name": "sensor-plot",
+  "version": "1.0.0",
+  "description": "objective: subscribe on mqtt broker, and plot chart.",
+  "main": "index.js",
+  "scripts": {
+    "build": "lerna run build --parallel",
+    "start": "lerna run start --parallel"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "keywords": [],
+  "author": "Rafael Trindade",
+  "license": "ISC",
+  "dependencies": {
+    "mqtt": "^5.7.0"
+  },
+  "devDependencies": {
+    "lerna": "^6.0.1"
+  }
+}
