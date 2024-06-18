@@ -1,15 +1,17 @@
 const client = mqtt.connect('ws://192.168.91.115:9001');
 
-client.on('connect', function () {
+const topics = ['temperature', 'humidity', 'lux', 'WL'];
+
+client.on('connect', () => {
     console.log('Conectado ao broker MQTT');
-    client.subscribe('test', function (err) {
-        if (!err) {
-            console.log('Inscrito no tópico: test');
+    client.subscribe(topics, (err) => {
+        if (err) {
+            console.error(`Erro na subscrição dos tópicos: ${err}`);
         }
     });
 });
 
-client.on('message', function (topic, message) {
-    // mensagem é um buffer
+client.on('message', (topic, message) => {
     console.log(`Mensagem recebida no tópico '${topic}': ${message.toString()}`);
 });
+
